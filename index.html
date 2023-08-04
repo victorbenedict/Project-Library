@@ -1,30 +1,60 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Project Library</title>
-	<link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="./images/icons8-bookcase-16.png">
+	<script src="script.js" defer></script>
+
 </head>
 <body>
-<h1>Project Library</h1>
-
-<button class="btn_newBook">New Book</button>
-<form class="form_newBook" style="display: none;">
-	<label for="input_title">Title: </label>
-	<input type="text" name="input_title" id="input_title">
-	<label for="input_author">Author: </label>
-	<input type="text" name="input_author" id="input_author">
-	<label for="input_pages">Number of Pages: </label>
-	<input type="number" name="input_pages" id="input_pages">
-	<label for="input_isRead">Read?</label>
-	<input type="checkbox" name="input_isRead" id="input_isRead">
-	<button type="submit">Add Book</button>
-</form>
-<div class="title_library">
-	<h2>My Library</h2>
-	<div>Title | Author | Number of Pages | Read?</div>
-	<div class="content_library"></div>
-</div>
-
-
-<script src="script.js"></script>
+	<header></header>
+	<section>
+		<h1>Library</h1>
+		<form id="form_book">
+			<fieldset>
+				<legend>Add a New Book</legend>
+				<div>
+					<label for="title">Title</label><br>
+					<input type="text" id="title" name="title">
+				</div>
+				<div>
+					<label for="author">Author</label><br>
+					<input type="text" id="author" name="author" >
+				</div>
+				<div>
+					<label for="pages">Pages</label><br>
+					<input type="number" id="pages" name="pages">
+				</div>
+				<div>
+					<label for="status">Status</label><br>
+					<select name="status" id="status">
+						<option value="Read">Read</option>
+						<option value="Not Read">Not Read</option>
+					</select>
+				</div>
+					<input type="submit" value="Submit">
+			</fieldset>
+		</form>
+	</section>
+	<main>
+		<h2>My Books</h2>
+		<hr>
+			<table>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Pages</th>
+					<th>Status</th>
+				</tr>
+				<tbody id="tablebody_book"></tbody>
+			</table> 
+	</main>
+	<footer>
+		<a href="https://www.theodinproject.com/lessons/node-path-javascript-library" target="_blank">The Odin Project</a>
+		<br>
+		<a href="https://github.com/victorbenedict/Project-Library" target="_blank">Source Code</a>
+	</footer>
 </body>
 </html>
